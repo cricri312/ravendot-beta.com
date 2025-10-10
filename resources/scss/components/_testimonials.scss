@@ -90,23 +90,6 @@
     width: 100%;
     overflow: visible;
     position: relative;
-    margin-left: -260px;
-    padding-left: 260px;
-
-    @media (max-width: 1600px) {
-        margin-left: -120px;
-        padding-left: 120px;
-    }
-
-    @media (max-width: 1200px) {
-        margin-left: -60px;
-        padding-left: 60px;
-    }
-
-    @media (max-width: 968px) {
-        margin-left: -24px;
-        padding-left: 24px;
-    }
 }
 
 .testimonials-track {
@@ -116,7 +99,6 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     padding-bottom: 20px;
-    padding-right: 260px;
 
     // Custom scrollbar styling
     &::-webkit-scrollbar {
@@ -139,16 +121,10 @@
     }
 
     @media (max-width: 1600px) {
-        padding-right: 120px;
         gap: 24px;
     }
 
-    @media (max-width: 1200px) {
-        padding-right: 60px;
-    }
-
     @media (max-width: 968px) {
-        padding-right: 24px;
         gap: 16px;
     }
 }

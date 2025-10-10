@@ -1,0 +1,313 @@
+// Variables
+@use 'variables' as *;
+
+// Components
+@use 'components/header';
+@use 'components/hero';
+@use 'components/projects';
+@use 'components/testimonials';
+@use 'components/about';
+@use 'components/companies';
+@use 'components/faq';
+@use 'components/footer';
+
+// Reset & Base
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size-base;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-text-dark;
+    background-color: $color-bg-white;
+    line-height: $line-height-normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity $transition-fast;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all $transition-base;
+}
+
+ul {
+    list-style: none;
+}
+
+// Container
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+// Hero Section
+.hero-section {
+    padding: $spacing-2xl 0 $spacing-3xl;
+    text-align: center;
+
+    .hero-profile {
+        margin-bottom: $spacing-lg;
+        display: flex;
+        justify-content: center;
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: $radius-lg;
+            object-fit: cover;
+            box-shadow: $shadow-md;
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: $spacing-md;
+        margin-bottom: $spacing-xl;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            transition: transform $transition-base;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                color: $color-text-gray;
+                transition: color $transition-base;
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                opacity: 1;
+
+                svg {
+                    color: $color-text-dark;
+                }
+            }
+        }
+    }
+
+    .hero-text {
+        font-size: $font-size-hero;
+        font-weight: $font-weight-normal;
+        line-height: $line-height-relaxed;
+        color: $color-text-dark;
+        max-width: 700px;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            font-size: $font-size-2xl;
+        }
+    }
+}
+
+// Project Sections
+.project-section {
+    padding: $spacing-3xl 0;
+
+    &--purple {
+        background-color: $color-purple;
+    }
+
+    &--blue {
+        background-color: $color-blue;
+    }
+
+    &--green {
+        background-color: $color-green;
+    }
+
+    &--pink {
+        background-color: $color-pink;
+    }
+
+    .project-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-2xl;
+        align-items: center;
+
+        @media (max-width: 968px) {
+            grid-template-columns: 1fr;
+            gap: $spacing-lg;
+        }
+
+        &--reverse {
+            .project-text {
+                order: 2;
+            }
+
+            .project-image {
+                order: 1;
+            }
+
+            @media (max-width: 968px) {
+                .project-text {
+                    order: 1;
+                }
+
+                .project-image {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    .project-text {
+        .project-title {
+            font-size: $font-size-3xl;
+            font-weight: $font-weight-bold;
+            margin-bottom: $spacing-md;
+            color: $color-text-dark;
+
+            @media (max-width: 768px) {
+                font-size: $font-size-2xl;
+            }
+        }
+
+        .project-description {
+            font-size: $font-size-lg;
+            color: $color-text-gray;
+            line-height: $line-height-relaxed;
+            margin-bottom: $spacing-md;
+        }
+
+        .project-features {
+            li {
+                font-size: $font-size-md;
+                color: $color-text-gray;
+                margin-bottom: $spacing-sm;
+                padding-left: $spacing-md;
+                position: relative;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    left: 0;
+                    color: $color-text-dark;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+    }
+
+    .project-image {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: $radius-lg;
+            box-shadow: $shadow-lg;
+        }
+    }
+}
+
+// Portfolio Grid
+.portfolio-grid {
+    padding: $spacing-3xl 0;
+    background-color: $color-bg-light;
+
+    .section-title {
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        margin-bottom: $spacing-2xl;
+        color: $color-text-dark;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-lg;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .grid-item {
+        padding: $spacing-2xl;
+        border-radius: $radius-lg;
+        min-height: 250px;
+        display: flex;
+        align-items: flex-end;
+        transition: transform $transition-base;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+
+        &--green {
+            background-color: $color-green;
+        }
+
+        &--dark {
+            background-color: $color-dark;
+
+            .grid-content {
+                h3, p {
+                    color: $color-bg-white;
+                }
+            }
+        }
+
+        &--charcoal {
+            background-color: $color-charcoal;
+
+            .grid-content {
+                h3, p {
+                    color: $color-bg-white;
+                }
+            }
+        }
+
+        &--peach {
+            background-color: $color-peach;
+        }
+    }
+
+    .grid-content {
+        h3 {
+            font-size: $font-size-2xl;
+            font-weight: $font-weight-bold;
+            margin-bottom: $spacing-xs;
+            color: $color-text-dark;
+        }
+
+        p {
+            font-size: $font-size-md;
+            color: $color-text-gray;
+        }
+    }
+}
+

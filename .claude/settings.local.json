@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma-desktop__get_screenshot",
+      "mcp__figma-desktop__get_code",
+      "mcp__figma-desktop__get_metadata",
+      "Bash(dir:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(claude mcp remove:*)",
+      "Bash(claude mcp add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

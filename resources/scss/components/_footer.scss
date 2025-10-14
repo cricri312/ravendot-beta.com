@@ -18,7 +18,7 @@
 }
 
 .footer-wrapper {
-    background: linear-gradient(180deg, #f9f7f6 0%, rgba(249, 247, 246, 0) 28.829%);
+    background: linear-gradient(180deg, rgba(249, 247, 246, 0) 0%, #f9f7f6 28.829%);
     border-radius: 36px;
     max-width: 1400px;
     margin: 0 auto;
@@ -238,7 +238,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 0 16px;
+    padding: 0 0 16px;
     border-bottom: 1px solid rgba(17, 16, 17, 0.2);
     text-decoration: none;
     transition: opacity 0.3s ease;
@@ -246,7 +246,7 @@
 
     @media (max-width: 968px) {
         min-width: 100%;
-        padding: 12px 0 16px;
+        padding: 0 0 16px;
     }
 
     &:hover {
@@ -262,6 +262,7 @@
     display: flex;
     align-items: center;
     gap: 7px;
+    padding: 8px 0;
 }
 
 .link-icon {

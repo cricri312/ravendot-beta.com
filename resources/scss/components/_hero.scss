@@ -42,7 +42,7 @@
     }
 
     @media (max-width: 968px) {
-        padding: 60px 24px 32px;
+        padding: 80px 20px 40px;
     }
 }
 
@@ -53,7 +53,7 @@
 
     @media (max-width: 968px) {
         flex-direction: column;
-        gap: 40px;
+        gap: 48px;
     }
 }
 
@@ -62,6 +62,12 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media (max-width: 968px) {
+        gap: 24px;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .hero-badge {
@@ -74,6 +80,11 @@
     gap: 8px;
     align-self: flex-start;
 
+    @media (max-width: 968px) {
+        padding: 6px 12px;
+        align-self: center;
+    }
+
     span {
         font-family: 'Atkinson Hyperlegible', $font-primary;
         font-size: 14px;
@@ -81,6 +92,41 @@
         letter-spacing: 0.84px;
         text-transform: uppercase;
         color: #111011;
+
+        @media (max-width: 968px) {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+    }
+}
+
+.hero-title {
+    font-family: 'Lora', serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 62.4px;
+    letter-spacing: -2.08px;
+    color: #111011;
+    margin: 0;
+    min-width: 628px;
+
+    @media (max-width: 1200px) {
+        font-size: 44px;
+        line-height: 52px;
+        min-width: auto;
+    }
+
+    @media (max-width: 968px) {
+        font-size: 29.3px;
+        line-height: 35.2px;
+        letter-spacing: -1.28px;
+        text-align: center;
+
+        br {
+            display: inline;
+        }
     }
 }
 
@@ -95,6 +141,16 @@
         rgba(17, 16, 17, 0) 100%
     );
     border-radius: 10px;
+
+    @media (max-width: 968px) {
+        width: 247.5px;
+        background: linear-gradient(
+            90deg,
+            rgba(234, 232, 225, 1) 0%,
+            rgba(17, 16, 17, 0.2) 49.099%,
+            rgba(234, 232, 225, 1) 96.847%
+        );
+    }
 }
 
 .hero-text {
@@ -107,8 +163,10 @@
         margin: 0;
 
         @media (max-width: 968px) {
+            text-align: center;
+
             br {
-                display: none;
+                display: inline;
             }
         }
     }

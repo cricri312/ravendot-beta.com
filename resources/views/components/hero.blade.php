@@ -8,6 +8,11 @@
                         <span>Athos 2.0 - Free Framer Template Portfolio</span>
                     </div>
 
+                    <h1 class="hero-title">
+                        Your Strategic Partner<br>
+                        for Digital Solutions
+                    </h1>
+
                     <div class="hero-divider"></div>
 
                     <div class="hero-text">

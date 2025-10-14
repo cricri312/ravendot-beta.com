@@ -1,18 +1,18 @@
 @use '../variables' as *;
 
 .projects-section {
-    padding: 80px 260px;
+    padding: 80px 260px 50px;
 
     @media (max-width: 1600px) {
-        padding: 60px 120px;
+        padding: 60px 120px 50px;
     }
 
     @media (max-width: 1200px) {
-        padding: 40px 60px;
+        padding: 40px 60px 50px;
     }
 
     @media (max-width: 968px) {
-        padding: 40px 24px;
+        padding: 79px 50px 80px;
     }
 }
 
@@ -24,7 +24,7 @@
 .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 84px;
 
     @media (max-width: 968px) {
         gap: 40px;
@@ -35,30 +35,37 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px;
+    max-width: 1280px;
+    padding: 0 60px;
+    margin: 0 auto;
+
+    @media (max-width: 968px) {
+        padding: 0;
+    }
 
     .projects-title {
         font-family: 'Atkinson Hyperlegible', $font-primary;
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 57.6px;
-        letter-spacing: -0.96px;
+        font-size: 46.1px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -2px;
         color: #111011;
         margin: 0;
 
         @media (max-width: 968px) {
-            font-size: 36px;
-            line-height: 43.2px;
-            letter-spacing: -0.72px;
+            font-size: 33.2px;
+            line-height: 39.6px;
+            letter-spacing: -1.44px;
         }
     }
 
     .projects-subtitle {
         font-family: 'Atkinson Hyperlegible', $font-primary;
-        font-size: 18px;
-        line-height: 27px;
-        letter-spacing: -0.18px;
-        color: rgba(17, 16, 17, 0.7);
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.4px;
+        color: #111011;
         margin: 0;
 
         @media (max-width: 968px) {
@@ -80,24 +87,25 @@
 }
 
 .project-card {
-    border-radius: 36px;
-    padding: 60px;
+    border-radius: 24px;
+    padding: 57.6px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    gap: 86.4px;
+    align-items: flex-start;
     position: sticky;
     top: 120px;
+    box-shadow: 0px 10px 40px -14px rgba(0, 0, 0, 0.05);
 
     @media (max-width: 1200px) {
         padding: 40px;
-        gap: 40px;
+        gap: 60px;
     }
 
     @media (max-width: 968px) {
         grid-template-columns: 1fr;
-        padding: 32px;
-        gap: 32px;
+        padding: 54.9px 54.89px 0;
+        gap: 24px;
         position: static;
     }
 
@@ -121,28 +129,56 @@
 .project-content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28.8px;
+    padding-bottom: 64px;
+
+    @media (max-width: 1200px) {
+        gap: 24px;
+        padding-bottom: 48px;
+    }
+
+    @media (max-width: 968px) {
+        gap: 27.45px;
+        padding-bottom: 64px;
+    }
+
+    > *:last-child {
+        margin-top: auto;
+        padding-top: 43.2px;
+
+        @media (max-width: 1200px) {
+            padding-top: 24px;
+        }
+
+        @media (max-width: 968px) {
+            padding-top: 41.17px;
+        }
+    }
 }
 
 .project-title {
     font-family: 'Atkinson Hyperlegible', $font-primary;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -0.8px;
+    font-size: 30.2px;
+    font-weight: 400;
+    line-height: 32.4px;
+    letter-spacing: -0.648px;
     color: #111011;
-    margin: 0;
+    margin: 0 0 21.6px 0;
 
     @media (max-width: 1200px) {
         font-size: 32px;
         line-height: 38.4px;
         letter-spacing: -0.64px;
+        margin-bottom: 20px;
     }
 
     @media (max-width: 968px) {
-        font-size: 28px;
-        line-height: 33.6px;
-        letter-spacing: -0.56px;
+        font-family: 'Inter', sans-serif;
+        font-size: 19.2px;
+        font-weight: 400;
+        line-height: 22.644px;
+        letter-spacing: -0.4117px;
+        margin-bottom: 20.59px;
 
         br {
             display: none;
@@ -152,15 +188,20 @@
 
 .project-description {
     font-family: 'Atkinson Hyperlegible', $font-primary;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.16px;
-    color: rgba(17, 16, 17, 0.7);
+    font-size: 16.2px;
+    font-weight: 400;
+    line-height: 24.3px;
+    letter-spacing: -0.162px;
+    color: rgba(16, 15, 16, 0.7);
     margin: 0;
 
     @media (max-width: 968px) {
-        font-size: 15px;
-        line-height: 22.5px;
+        font-family: 'Inter', sans-serif;
+        font-size: 15.4px;
+        font-weight: 400;
+        line-height: 23.158px;
+        letter-spacing: -0.15px;
+        color: rgba(16, 15, 16, 0.7);
 
         br {
             display: none;
@@ -170,24 +211,40 @@
 
 .project-features {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-direction: column;
+    gap: 9px;
+
+    @media (max-width: 968px) {
+        gap: 8.6px;
+    }
 }
 
 .feature-badge {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
-    border: 1px solid rgba(17, 16, 17, 0.1);
-    border-radius: 24px;
-    padding: 8px 16px;
+    background: #f4f2ef;
+    border: 1px solid #f4f2ef;
+    border-radius: 36px;
+    padding: 8.4px 10.8px 9px 10.8px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
     font-family: 'Atkinson Hyperlegible', $font-primary;
-    font-size: 14px;
-    line-height: 19.6px;
-    letter-spacing: 0.42px;
+    font-size: 14.4px;
+    font-weight: 400;
+    line-height: 20.16px;
+    letter-spacing: -0.136px;
     color: #111011;
     transition: all 0.2s ease;
+    align-self: flex-start;
+
+    @media (max-width: 968px) {
+        background: white;
+        border: 1px solid white;
+        font-size: 13.7px;
+        line-height: 19.213px;
+        letter-spacing: -0.136px;
+        padding: 8.01px 10.29px 8.58px 10.29px;
+        gap: 8.57px;
+    }
 
     &:hover {
         transform: translateY(-2px);
@@ -195,21 +252,28 @@
     }
 
     &--alt {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%);
+        background: #f4f2ef;
+        border: 1px solid #f4f2ef;
     }
 
     &--green {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.35) 100%);
+        background: #e5fadc;
+        border: 1px solid #e5fadc;
     }
 }
 
 .feature-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(17, 16, 17, 0.4) 0%, rgba(17, 16, 17, 0) 100%);
+    background: radial-gradient(circle at 25% 100%, rgba(205, 87, 255, 1) 0%, rgba(218, 117, 199, 1) 25%, rgba(230, 147, 143, 1) 50%, rgba(243, 176, 87, 1) 75%, rgba(249, 191, 59, 1) 87.5%, rgba(255, 206, 31, 1) 100%);
     position: relative;
     flex-shrink: 0;
+
+    @media (max-width: 968px) {
+        width: 17.16px;
+        height: 17.16px;
+    }
 
     &::before {
         content: '';
@@ -221,21 +285,30 @@
         height: 6px;
         border-radius: 50%;
         background-color: #111011;
+        display: none;
     }
 }
 
 .project-link {
     font-family: 'Atkinson Hyperlegible', $font-primary;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: -0.15px;
+    font-size: 16.2px;
+    font-weight: 400;
+    line-height: 24.3px;
+    letter-spacing: -0.162px;
     color: #111011;
     text-decoration: none;
     align-self: flex-start;
     position: relative;
     padding-bottom: 2px;
     transition: opacity 0.2s ease;
+
+    @media (max-width: 968px) {
+        font-family: 'Inter', sans-serif;
+        font-size: 15.4px;
+        font-weight: 400;
+        line-height: 23.158px;
+        letter-spacing: -0.15px;
+    }
 
     &::after {
         content: '';
@@ -261,18 +334,30 @@
 .project-images {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 3.6px;
+
+    @media (max-width: 968px) {
+        display: none;
+    }
 
     img {
         width: 100%;
         height: auto;
-        border-radius: 24px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+        &:first-child {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:last-child {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
         &:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
         }
     }
 }

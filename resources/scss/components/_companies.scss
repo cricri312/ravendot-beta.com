@@ -43,6 +43,8 @@
 
 .companies-header {
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .companies-title {
@@ -53,6 +55,7 @@
     letter-spacing: -2px;
     color: #111011;
     margin: 0;
+    max-width: 640px;
 
     @media (max-width: 1200px) {
         font-size: 40px;

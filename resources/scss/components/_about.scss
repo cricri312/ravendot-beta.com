@@ -2,18 +2,18 @@
 
 .about-section {
     background-color: #ecebe4;
-    padding: 50px 260px 20px;
+    padding: 50px 260px 0;
 
     @media (max-width: 1600px) {
-        padding: 40px 120px 20px;
+        padding: 40px 120px 0;
     }
 
     @media (max-width: 1200px) {
-        padding: 40px 60px 20px;
+        padding: 40px 60px 0;
     }
 
     @media (max-width: 968px) {
-        padding: 40px 10px 20px;
+        padding: 40px 24px 0;
     }
 }
 

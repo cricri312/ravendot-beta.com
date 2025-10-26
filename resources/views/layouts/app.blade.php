@@ -21,6 +21,12 @@
     <meta property="twitter:description" content="@yield('twitter_description', 'Portfolio and professional website')">
     <meta property="twitter:image" content="@yield('twitter_image', asset('images/og-image.jpg'))">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('android-chrome-512x512.png') }}">
+
     <title>@yield('title', config('app.name'))</title>
 
     <!-- Fonts -->

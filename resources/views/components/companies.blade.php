@@ -4,9 +4,11 @@
             {{-- Header --}}
             <div class="companies-header">
                 <h2 class="companies-title">
-                    Relied upon by a Fresh<br>
-                    Generation of Companies
+                    {{ __('common.benefits_title') }}
                 </h2>
+                <p class="projects-subtitle">
+                    {{ __('common.benefits_text') }}
+                </p>
             </div>
 
             {{-- Grid --}}
@@ -37,7 +39,7 @@
                         </div>
                     </div>
                     <div class="company-image company-image--green">
-                        <img src="{{ asset('images/logo-3portals.png') }}" alt="3Portals">
+                        <img src="{{ asset('images/homepage/leaders/fb.png') }}" alt="Facebook">
                         <div class="image-overlay image-overlay--green"></div>
                     </div>
                 </div>
@@ -45,7 +47,7 @@
                 {{-- Column 2 --}}
                 <div class="companies-column companies-column--reverse">
                     <div class="company-image company-image--purple">
-                        <img src="{{ asset('images/company-45degrees.png') }}" alt="45 Degrees">
+                        <img src="{{ asset('images/homepage/leaders/insta.png') }}" alt="Instagram">
                         <div class="image-overlay image-overlay--purple"></div>
                     </div>
                     <div class="company-card company-card--purple">
@@ -100,7 +102,7 @@
                         </div>
                     </div>
                     <div class="company-image company-image--blue">
-                        <img src="{{ asset('images/company-acme.png') }}" alt="Acme Corp">
+                        <img src="{{ asset('images/homepage/leaders/yt.png') }}" alt="YouTube">
                         <div class="image-overlay image-overlay--blue"></div>
                     </div>
                 </div>
@@ -108,7 +110,7 @@
                 {{-- Column 4 --}}
                 <div class="companies-column companies-column--reverse">
                     <div class="company-image company-image--orange">
-                        <img src="{{ asset('images/company-alphawave.png') }}" alt="AlphaWave">
+                        <img src="{{ asset('images/homepage/leaders/x.png') }}" alt="Twitter/X">
                     </div>
                     <div class="company-card company-card--orange">
                         <div class="card-content">

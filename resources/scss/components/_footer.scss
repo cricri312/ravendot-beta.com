@@ -75,7 +75,7 @@
 .footer-cta-content {
     background-color: #0d3272;
     border-radius: 256px;
-    padding: 96px 0;
+    padding: 96px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,6 +94,33 @@
         border-radius: 64px;
         padding: 60px 24px;
         gap: 24px;
+    }
+
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-family: 'Atkinson Hyperlegible', $font-primary;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.15px;
+    max-width: 850px;
+    margin: 0;
+    padding: 0 40px;
+
+    @media (max-width: 1200px) {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 700px;
+        padding: 0 30px;
+    }
+
+    @media (max-width: 968px) {
+        font-size: 13px;
+        line-height: 19px;
+        max-width: 100%;
+        padding: 0 20px;
     }
 }
 

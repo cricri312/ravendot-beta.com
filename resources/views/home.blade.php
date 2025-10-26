@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Athos 2.0 - Portfolio Template')
-@section('meta_description', 'Helping startups and brands to craft expressive and engaging solutions for their software needs.')
+@section('title', 'Ravendot - ' . __('common.designh1'))
+@section('meta_description', __('common.meta_description'))
 
 @section('content')
     @include('components.hero')

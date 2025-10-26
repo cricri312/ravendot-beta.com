@@ -4,19 +4,17 @@
             {{-- Logo --}}
             <div class="header-logo">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                    <img src="{{ asset('images/raven_logo.svg') }}" alt="Ravendot" width="60" height="60" style="filter: invert(1);">
                 </a>
             </div>
 
             {{-- Navigation Links (Desktop Only) --}}
             <div class="header-links">
-                <a href="#landings" class="header-link">Landings</a>
-                <a href="#work" class="header-link">Work</a>
-                <a href="#process" class="header-link">Process</a>
-                <a href="#experience" class="header-link">Experience</a>
-                <a href="#faq" class="header-link">FAQ</a>
-                <a href="#proposal" class="header-link">Proposal</a>
-                <a href="#athos-pro" class="header-link">Athos Pro</a>
+                <a href="/2d-design" class="header-link">{{ __('common.nav_2d_design') }}</a>
+                <a href="/web" class="header-link">{{ __('common.nav_web') }}</a>
+                <a href="/code" class="header-link">{{ __('common.nav_code') }}</a>
+                <a href="/3d-design" class="header-link">{{ __('common.nav_3d_design') }}</a>
+                <a href="/motion" class="header-link">{{ __('common.nav_motion') }}</a>
             </div>
 
             {{-- Mobile & Desktop Right Side --}}
@@ -29,7 +27,7 @@
 
                 {{-- Contact Button --}}
                 <div class="header-cta">
-                    <a href="#contact" class="btn-contact">Contact me</a>
+                    <a href="#contact" class="btn-contact">{{ __('common.contact_me') }}</a>
                 </div>
             </div>
         </nav>

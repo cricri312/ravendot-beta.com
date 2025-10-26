@@ -1,31 +1,28 @@
 <footer class="footer-section">
     <div class="footer-wrapper">
         <div class="footer-container">
-            {{-- CTA Section --}}
-            <div class="footer-cta">
+            {{-- CTA Section / Notify --}}
+            <div id="notify" class="footer-cta">
                 <div class="footer-cta-content">
-                    {{-- Author Badge --}}
-                    <div class="author-badge">
-                        <div class="author-avatar">
-                            <img src="{{ asset('images/avatar.jpg') }}" alt="Goran Babarogic">
-                        </div>
-                        <span class="author-name">Goran Babarogic - Framer Expert</span>
-                    </div>
-
                     {{-- Heading --}}
                     <h2 class="footer-title">
-                        Upgrade your web<br>
-                        presence with Framer
+                        {{ __('common.notify') }}
                     </h2>
 
-                    {{-- CTA Button --}}
+                    {{-- Description --}}
+                    <p class="footer-description">
+                        {{ __('common.notify_text') }}
+                    </p>
+
+                    {{-- Email Form --}}
                     <div class="footer-cta-button">
-                        <a href="#" class="btn-hire">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 2L8 14M2 8L14 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            Hire Me on Contra
-                        </a>
+                        <form action="#" method="POST" style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto;">
+                            <input type="email" name="email" placeholder="{{ __('common.email_placeholder') }}" required
+                                   style="flex: 1; padding: 12px 20px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+                            <button type="submit" class="btn-hire">
+                                {{ __('common.subscribe_button') }}
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -39,7 +36,7 @@
                                 <path d="M26.5 4H5.5C4.67 4 4 4.67 4 5.5V26.5C4 27.33 4.67 28 5.5 28H26.5C27.33 28 28 27.33 28 26.5V5.5C28 4.67 27.33 4 26.5 4ZM11.5 24.5H7.5V13H11.5V24.5ZM9.5 11.31C8.26 11.31 7.26 10.31 7.26 9.06C7.26 7.81 8.26 6.81 9.5 6.81C10.74 6.81 11.74 7.81 11.74 9.06C11.74 10.31 10.74 11.31 9.5 11.31ZM24.5 24.5H20.5V18.9C20.5 17.42 20.47 15.52 18.42 15.52C16.34 15.52 16.03 17.13 16.03 18.79V24.5H12.03V13H15.86V14.74H15.91C16.44 13.74 17.74 12.68 19.7 12.68C23.74 12.68 24.5 15.18 24.5 18.42V24.5Z" fill="currentColor"/>
                             </svg>
                         </div>
-                        <span>LinkedIn</span>
+                        <span>{{ __('common.linkedin') }}</span>
                     </div>
                     <div class="link-arrow">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +96,7 @@
 
             {{-- Copyright --}}
             <div class="footer-copyright">
-                <p>Nicey © 2024. Designed by Goran Babarogic</p>
+                <p>Ravendot © {{ date('Y') }}. {{ __('common.creative_technology_studio') }}</p>
             </div>
         </div>
     </div>

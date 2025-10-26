@@ -1,86 +1,69 @@
-<section class="about-section">
+<section id="introduction" class="about-section">
     <div class="about-wrapper">
         <div class="about-container">
-            {{-- Process Header --}}
+            {{-- Introduction: Vision --}}
             <div class="process-header">
-                <h2 class="process-title">Process</h2>
+                <h2 class="process-title">{{ __('common.introduction_title') }}</h2>
                 <p class="process-subtitle">
-                    Your compass to innovation and design excellence. From exploration to<br>
-                    execution, this dynamic framework fuels creativity and precision,<br>
-                    ensuring your product journey aligns seamlessly with user desires.
+                    {{ __('common.introduction_text_1') }}<br><br>
+                    {{ __('common.introduction_text_2') }}<br><br>
+                    {{ __('common.introduction_text_3') }}
                 </p>
             </div>
 
-            {{-- Process Steps with Sticky Images --}}
+            {{-- Benefits Section --}}
+            <div class="process-header" style="margin-top: 80px;">
+                <h2 class="process-title">{{ __('common.benefits_title') }}</h2>
+                <p class="process-subtitle">
+                    {{ __('common.benefits_text') }}
+                </p>
+            </div>
+
+            {{-- Info Cards: 3 Benefits --}}
             <div class="process-content">
                 <div class="process-steps">
-                    {{-- Step 1: Discover --}}
+                    {{-- Card 1: Innovation --}}
                     <div class="process-step-wrapper">
                         <div class="process-step">
                             <div class="step-badge">
-                                <span>Discover</span>
+                                <span>{{ __('common.infocard_1_title') }}</span>
                             </div>
                             <h3 class="step-title">
-                                Brainstorming sessions in<br>
-                                order to take their needs and<br>
-                                company goals into account.
+                                {{ __('common.infocard_1_description') }}
                             </h3>
                         </div>
                         <div class="step-image-mobile">
-                            <img src="{{ asset('images/product-image-1.png') }}" alt="Discover">
+                            <img src="{{ asset('images/homepage/infocard/chart.webp') }}" alt="{{ __('common.infocard_1_title') }}">
                         </div>
                     </div>
 
-                    {{-- Step 2: Define --}}
+                    {{-- Card 2: Experience --}}
                     <div class="process-step-wrapper">
                         <div class="process-step">
                             <div class="step-badge">
-                                <span>Define</span>
+                                <span>{{ __('common.infocard_2_title') }}</span>
                             </div>
                             <h3 class="step-title">
-                                Gather additional information<br>
-                                about the ideal client, market<br>
-                                opportunities and design sprint.
+                                {{ __('common.infocard_2_description') }}
                             </h3>
                         </div>
                         <div class="step-image-mobile">
-                            <img src="{{ asset('images/product-image-1.png') }}" alt="Define">
+                            <img src="{{ asset('images/homepage/infocard/crypto.webp') }}" alt="{{ __('common.infocard_2_title') }}">
                         </div>
                     </div>
 
-                    {{-- Step 3: Develop --}}
+                    {{-- Card 3: Client-Centricity --}}
                     <div class="process-step-wrapper">
                         <div class="process-step">
                             <div class="step-badge">
-                                <span>Develop</span>
+                                <span>{{ __('common.infocard_3_title') }}</span>
                             </div>
                             <h3 class="step-title">
-                                Define the user experience<br>
-                                and analyze your designs will<br>
-                                inform behavior and effect<br>
-                                the experience of the user.
+                                {{ __('common.infocard_3_description') }}
                             </h3>
                         </div>
                         <div class="step-image-mobile">
-                            <img src="{{ asset('images/product-image-1.png') }}" alt="Develop">
-                        </div>
-                    </div>
-
-                    {{-- Step 4: Deliver --}}
-                    <div class="process-step-wrapper">
-                        <div class="process-step">
-                            <div class="step-badge">
-                                <span>Deliver</span>
-                            </div>
-                            <h3 class="step-title">
-                                Determine design patterns,<br>
-                                elements of template pages<br>
-                                and work with developers<br>
-                                to test design functionality.
-                            </h3>
-                        </div>
-                        <div class="step-image-mobile">
-                            <img src="{{ asset('images/product-image-1.png') }}" alt="Deliver">
+                            <img src="{{ asset('images/homepage/infocard/nucle.webp') }}" alt="{{ __('common.infocard_3_title') }}">
                         </div>
                     </div>
                 </div>
@@ -88,77 +71,51 @@
                 {{-- Sticky Image Container (Desktop) --}}
                 <div class="process-image-container">
                     <div class="process-image">
-                        <img src="{{ asset('images/process-image.png') }}" alt="Process visualization">
+                        <img src="{{ asset('images/homepage/workflow/api.webp') }}" alt="Ravendot Workflow">
                     </div>
                 </div>
             </div>
 
-            {{-- Product Design Section --}}
+            {{-- Workflow / Support Section --}}
             <div class="product-section">
                 <div class="product-content">
-                    {{-- Left: Text + Images --}}
                     <div class="product-left">
                         <div class="product-text">
                             <h2 class="product-title">
-                                Product<br>
-                                design for easy<br>
-                                community access
+                                {{ __('common.workflow_1_title') }}
                             </h2>
                             <p class="product-description">
-                                Helping startups and brands to<br>
-                                craft expressive and engaging<br>
-                                solutions for their software needs.
+                                {{ __('common.workflow_1_description') }}
                             </p>
                         </div>
 
                         <div class="product-images">
                             <div class="product-image product-image-1">
-                                <img src="{{ asset('images/product-image-1.png') }}" alt="Product design 1">
+                                <img src="{{ asset('images/homepage/workflow/workers.webp') }}" alt="Team Workflow">
                             </div>
                             <div class="product-image product-image-2">
-                                <img src="{{ asset('images/product-image-1.png') }}" alt="Product design 2">
+                                <img src="{{ asset('images/homepage/design/graph.webp') }}" alt="Design Process">
                             </div>
-                        </div>
-                    </div>
-
-                    {{-- Right: Tabs --}}
-                    <div class="product-tabs">
-                        <div class="tab tab-active">
-                            <span>Product Design</span>
-                            <div class="tab-underline"></div>
-                        </div>
-                        <div class="tab">
-                            <span>UX Research</span>
-                            <div class="tab-underline"></div>
-                        </div>
-                        <div class="tab">
-                            <span>Leadership</span>
-                            <div class="tab-underline"></div>
-                        </div>
-                        <div class="tab">
-                            <span>Design System</span>
-                            <div class="tab-underline"></div>
                         </div>
                     </div>
                 </div>
 
-                {{-- Statistics --}}
+                {{-- Badges Section --}}
                 <div class="statistics">
                     <div class="stat-item">
-                        <div class="stat-label">Years experience</div>
-                        <div class="stat-value">14</div>
+                        <div class="stat-label">{{ __('common.badges_project') }}</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">Projects completed</div>
-                        <div class="stat-value">91</div>
+                        <div class="stat-label">{{ __('common.badges_workflow') }}</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">Startup funding</div>
-                        <div class="stat-value">$100m</div>
+                        <div class="stat-label">{{ __('common.badges_trend') }}</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">Industries served</div>
-                        <div class="stat-value">10</div>
+                        <div class="stat-label">{{ __('common.badges_premium') }}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">{{ __('common.badges_support') }}</div>
                     </div>
                 </div>
             </div>
